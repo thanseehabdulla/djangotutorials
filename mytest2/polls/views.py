@@ -7,7 +7,9 @@ from django.shortcuts import render, get_object_or_404
 from django.template import loader
 from django.urls import reverse
 from django.views import generic
+from rest_framework import viewsets
 
+from .serializers import QuestionSerializer
 from .models import Question, Choice
 
 
@@ -96,3 +98,11 @@ def vote(request, question_id):
         # with POST data. This prevents data from being posted twice if a
         # user hits the Back button.
         return HttpResponseRedirect(reverse('polls:results', args=(question.id,)))
+
+
+class QuestionViewSet(viewsets.ModelViewSet):
+    """
+    API endpoint that allows users to be viewed or edited.
+    """
+    queryset = Question.objects.all().order_by('-pub_date')
+    serializer_class = QuestionSerializer
