@@ -1,1 +1,1 @@
-newtest2
+This  is a python django test project to implement all the functionality such as rest, app, bundling, sqlite , test cases , connecting db progres , mysql , monngo , firebase 0auth signIn 
