@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'polls',
     'api',
     'rest_framework',
+    'quickstart',
 ]
 
 MIDDLEWARE = [
