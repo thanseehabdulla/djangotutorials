@@ -104,5 +104,6 @@ class QuestionViewSet(viewsets.ModelViewSet):
     """
     API endpoint that allows users to be viewed or edited.
     """
+    http_method_names = ['get', 'post', 'put', 'delete']
     queryset = Question.objects.all().order_by('-pub_date')
     serializer_class = QuestionSerializer

@@ -1,3 +1,7 @@
 django >= 2.0.9
 djangorestframework >= 2.0.0
 pygments  >= 2.2.0  # We'll be using this for the code highlighting
+django-rest-auth[with_social]
+django-rest-auth >= 0.9.3
+djangorestframework-jwt >= 1.11.0
+
